@@ -17,11 +17,53 @@
     <title>Studio</title>
   </head>
   <body>
+    <div class="js-menu-container">
+      <button class="menu-toggle js-close-menu">
+        <svg>
+          <use href="./images/icons.svg#icon-close"></use>
+        </svg>
+      </button>
+      <nav class="menu-drawer-navigation">
+        <ul class="menu-link-address">
+          <li>
+            <a class="menu-link-address actual" href="./index.html">Studio</a>
+          </li>
+          <li>
+            <a class="menu-link-address" href="./portofolio.html">Portofolio</a>
+          </li>
+          <li>
+            <a class="menu-link-address" href="./contacts.html">Contacts</a>
+          </li>
+        </ul>
+        <ul class="menu-address-container">
+          <li>
+            <a href="tel:+1212-772-4150">+1 212-772-4150</a>
+          </li>
+          <li>
+            <a href="mailto:info@devstudio.com">info@devstudio.com</a>
+          </li>
+        </ul>
+        <ul class="menu-drawer-social-media">
+          <li><a href="#">Instagram</a></li>
+          <li><span>|</span></li>
+          <li><a href="#">Twitter</a></li>
+          <li><span>|</span></li>
+          <li><a href="#">Facebook</a></li>
+          <li><span>|</span></li>
+          <li><a href="#">Instagram</a></li>
+        </ul>
+      </nav>
+    </div>
     <header class="header-container">
+      <div class="menu-container js-open-menu">
+        <svg class="menu-svg">
+          <use href="./images/icons.svg#icon-menu"></use>
+        </svg>
+      </div>
       <div class="navigation-container">
         <a
           class="main-link"
-          href="https://panabogdanc.github.io/goit-markup-hw-06/"
+          href="https://panabogdanc.github.io/goit-markup-hw-07/"
           ><span class="main-link-style">Web</span>Studio</a
         >
         <nav class="navigation-link">
@@ -150,9 +192,12 @@
 
       <section class="first-section">
         <div class="first-section-container">
-          <h1 class="first-section-title">
-            EFFECTIVE SOLUTIONS FOR YOUR BUSINESS
-          </h1>
+          <div class="first-section-title-container">
+            <h1 class="first-section-title">
+              EFFECTIVE SOLUTIONS FOR YOUR BUSINESS
+            </h1>
+          </div>
+
           <button data-modal-open class="first-section-button" type="button">
             Request our service
           </button>
@@ -160,7 +205,7 @@
       </section>
       <section class="what-we-do-section-container">
         <ul class="what-we-do-description-container">
-          <li>
+          <li class="what-we-do-cards">
             <div class="what-we-do-icons-container">
               <svg class="what-we-do-icons">
                 <use xlink:href="./images/icons.svg#icon-antenna" />
@@ -173,7 +218,7 @@
               develop a customized solution.
             </p>
           </li>
-          <li>
+          <li class="what-we-do-cards">
             <div class="what-we-do-icons-container">
               <svg class="what-we-do-icons">
                 <use xlink:href="./images/icons.svg#icon-clock" />
@@ -185,7 +230,7 @@
               the company: respect your time and deadlines.
             </p>
           </li>
-          <li>
+          <li class="what-we-do-cards">
             <div class="what-we-do-icons-container">
               <svg class="what-we-do-icons">
                 <use xlink:href="./images/icons.svg#icon-diagram" />
@@ -197,7 +242,7 @@
               solution development and implementation.
             </p>
           </li>
-          <li>
+          <li class="what-we-do-cards">
             <div class="what-we-do-icons-container">
               <svg class="what-we-do-icons">
                 <use xlink:href="./images/icons.svg#icon-astronaut" />
@@ -254,12 +299,33 @@
           <h2 class="team-title">Our Team</h2>
           <ul class="team-cards-container">
             <li>
-              <img
-                src="./images/christopher-walker.jpg"
-                width="270"
-                height="260"
-                alt="Christopher Walker"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1158px)"
+                  srcset="
+                    ./images/christopher-walker.jpg    1x,
+                    ./images/christopher-walker-2x.jpg 2x
+                  "
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/christopher-walker_t.jpg    1x,
+                    ./images/christopher-walker_t-2x.jpg 2x
+                  "
+                />
+                <source
+                  media="(max-width: 768px)"
+                  srcset="
+                    ./images/christopher-walker_m.jpg    1x,
+                    ./images/christopher-walker_m-2x.jpg 2x
+                  "
+                />
+                <img
+                  src="./images/christopher-walker.jpg"
+                  alt="Christopher Walker"
+                />
+              </picture>
               <h3 class="team-member">Christopher Walker</h3>
               <p class="team-role">Product Designer</p>
               <ul class="team-social-media">
@@ -286,12 +352,30 @@
               </ul>
             </li>
             <li>
-              <img
-                src="./images/kylie-evans.jpg"
-                width="270"
-                height="260"
-                alt="Kylie Evans"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1158px)"
+                  srcset="
+                    ./images/kylie-evans.jpg    1x,
+                    ./images/kylie-evans-2x.jpg 2x
+                  "
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/kylie-evans_t.jpg    1x,
+                    ./images/kylie-evans_t-2x.jpg 2x
+                  "
+                />
+                <source
+                  media="(max-width: 768px)"
+                  srcset="
+                    ./images/kylie-evans_m.jpg    1x,
+                    ./images/kylie-evans_m-2x.jpg 2x
+                  "
+                />
+                <img src="./images/kylie-evans.jpg" alt="Kylie Evans" />
+              </picture>
               <h3 class="team-member">Kylie Evans</h3>
               <p class="team-role">Frontend Developer</p>
               <ul class="team-social-media">
@@ -318,12 +402,30 @@
               </ul>
             </li>
             <li>
-              <img
-                src="./images/ryan-harris.jpg"
-                width="270"
-                height="260"
-                alt="Ryan Harris"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1158px)"
+                  srcset="
+                    ./images/ryan-harris.jpg    1x,
+                    ./images/ryan-harris-2x.jpg 2x
+                  "
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/ryan-harris_t.jpg    1x,
+                    ./images/ryan-harris_t-2x.jpg 2x
+                  "
+                />
+                <source
+                  media="(max-width: 768px)"
+                  srcset="
+                    ./images/ryan-harris_m.jpg    1x,
+                    ./images/ryan-harris_m-2x.jpg 2x
+                  "
+                />
+                <img src="./images/ryan-harris.jpg" alt="Ryan Harris" />
+              </picture>
               <h3 class="team-member">Ryan Harris</h3>
               <p class="team-role">Marketing</p>
               <ul class="team-social-media">
@@ -350,12 +452,30 @@
               </ul>
             </li>
             <li>
-              <img
-                src="./images/tyler-moore.jpg"
-                width="270"
-                height="260"
-                alt="Tyler Moore"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1158px)"
+                  srcset="
+                    ./images/tyler-moore.jpg    1x,
+                    ./images/tyler-moore-2x.jpg 2x
+                  "
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/tyler-moore_t.jpg    1x,
+                    ./images/tyler-moore_t-2x.jpg 2x
+                  "
+                />
+                <source
+                  media="(max-width: 768px)"
+                  srcset="
+                    ./images/tyler-moore_m.jpg    1x,
+                    ./images/tyler-moore_m-2x.jpg 2x
+                  "
+                />
+                <img src="./images/tyler-moore.jpg" alt="Tyler Moore" />
+              </picture>
               <h3 class="team-member">Tyler Moore</h3>
               <p class="team-role">UI Designer</p>
               <ul class="team-social-media">
@@ -388,32 +508,32 @@
         <div class="regular-customers-container">
           <h2 class="regular-customers-title">Regular Customer</h2>
           <ul class="regular-customers-list">
-            <li>
+            <li class="regular-customer-svg">
               <svg>
                 <use xlink:href="./images/icons.svg#icon-logo-1" />
               </svg>
             </li>
-            <li>
+            <li class="regular-customer-svg">
               <svg>
                 <use xlink:href="./images/icons.svg#icon-logo-2" />
               </svg>
             </li>
-            <li>
+            <li class="regular-customer-svg">
               <svg>
                 <use xlink:href="./images/icons.svg#icon-logo-3" />
               </svg>
             </li>
-            <li>
+            <li class="regular-customer-svg">
               <svg>
                 <use xlink:href="./images/icons.svg#icon-logo-4" />
               </svg>
             </li>
-            <li>
+            <li class="regular-customer-svg">
               <svg>
                 <use xlink:href="./images/icons.svg#icon-logo-5" />
               </svg>
             </li>
-            <li>
+            <li class="regular-customer-svg">
               <svg>
                 <use xlink:href="./images/icons.svg#icon-logo-6" />
               </svg>
@@ -424,55 +544,58 @@
     </main>
 
     <footer class="footer-style">
-      <div class="footer-container">
-        <a
-          class="footer-main-link"
-          href="https://panabogdanc.github.io/goit-markup-hw-06/"
-          ><span class="main-link-style">Web</span>Studio</a
-        >
-        <address>
-          <ul class="footer-address-container">
+      <div class="footer-find-us-container">
+        <div class="footer-container">
+          <a
+            class="footer-main-link"
+            href="https://panabogdanc.github.io/goit-markup-hw-07/"
+            ><span class="main-link-style">Web</span>Studio</a
+          >
+          <address>
+            <ul class="footer-address-container">
+              <li>
+                <span class="address-style">695 Park Ave, NY 10065, USA</span>
+              </li>
+              <li>
+                <a class="contact-method" href="mailto:info@devstudio.com"
+                  >info@devstudio.com</a
+                >
+              </li>
+              <li>
+                <a class="contact-method" href="tel:+1212-772-4150"
+                  >+1 212-772-4150</a
+                >
+              </li>
+            </ul>
+          </address>
+        </div>
+        <div class="find-us">
+          <h3 class="find-us-title">FIND US ON</h3>
+          <ul class="find-us-list">
             <li>
-              <span class="address-style">695 Park Ave, NY 10065, USA</span>
+              <svg>
+                <use xlink:href="./images/icons.svg#icon-instagram" />
+              </svg>
             </li>
             <li>
-              <a class="contact-method" href="mailto:info@devstudio.com"
-                >info@devstudio.com</a
-              >
+              <svg>
+                <use xlink:href="./images/icons.svg#icon-twitter" />
+              </svg>
             </li>
             <li>
-              <a class="contact-method" href="tel:+1212-772-4150"
-                >+1 212-772-4150</a
-              >
+              <svg>
+                <use xlink:href="./images/icons.svg#icon-facebook" />
+              </svg>
+            </li>
+            <li>
+              <svg>
+                <use xlink:href="./images/icons.svg#icon-linkedin" />
+              </svg>
             </li>
           </ul>
-        </address>
+        </div>
       </div>
-      <div class="find-us">
-        <h3 class="find-us-title">FIND US ON</h3>
-        <ul class="find-us-list">
-          <li>
-            <svg>
-              <use xlink:href="./images/icons.svg#icon-instagram" />
-            </svg>
-          </li>
-          <li>
-            <svg>
-              <use xlink:href="./images/icons.svg#icon-twitter" />
-            </svg>
-          </li>
-          <li>
-            <svg>
-              <use xlink:href="./images/icons.svg#icon-facebook" />
-            </svg>
-          </li>
-          <li>
-            <svg>
-              <use xlink:href="./images/icons.svg#icon-linkedin" />
-            </svg>
-          </li>
-        </ul>
-      </div>
+
       <div class="subscribe-container">
         <label class="subscribe-title" for="subscribe"
           >SUBSCRIBE TO THE NEWSLETTER</label
@@ -499,6 +622,13 @@
         </form>
       </div>
     </footer>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>
