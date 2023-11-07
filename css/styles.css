@@ -261,7 +261,7 @@ header ul {
 .first-section {
   background-color: var(--standard-bg-color);
   background-image: url(../images/background-image.jpg);
-  max-width: 1600px;
+  width: 1600px;
   height: 600px;
   display: flex;
   justify-content: center;
@@ -275,6 +275,7 @@ header ul {
   justify-content: center;
   align-content: center;
   align-items: center;
+  overflow: hidden;
   gap: 30px;
 }
 
