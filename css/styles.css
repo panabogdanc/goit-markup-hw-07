@@ -1195,4 +1195,9 @@ header ul {
   .footer-style {
     flex-direction: row;
   }
+
+  .subscribe-container {
+    padding-bottom: 0;
+    padding-top: 20px;
+  }
 }
