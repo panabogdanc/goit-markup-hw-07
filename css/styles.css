@@ -283,6 +283,7 @@ header ul {
   font-size: 44px;
   letter-spacing: 0.2rem;
   width: 100%;
+  max-width: 375px;
   text-align: center;
 }
 
@@ -1048,6 +1049,10 @@ header ul {
 
   .address-container li:first-child {
     padding-bottom: 10px;
+  }
+
+  .first-section-title {
+    max-width: 786px;
   }
 
   .what-we-do-description-container {
